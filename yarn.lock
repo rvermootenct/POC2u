@@ -842,10 +842,10 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.3.tgz#722b4b639936129307ddbab3a390f6bcacf3e7bc"
   integrity sha512-I01hgqxxnOgOtJTGlq0ZsGJYiTEEiSGVEGQn3vimZSqEP1HqzyFNbzGTq14Xdyeow2yGJjygjoFF1pmtE+SQaw==
 
-"@rails/actioncable@^6.0.3-4":
+"@rails/ujs@^6.0.3-4":
   version "6.0.3-4"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.0.3-4.tgz#f17c0ef2235d1624d6052b749005608260bd55ef"
-  integrity sha512-uie5McTpl69vHnXCVzKj7iYpVKFfLuE7aqul/I7MX5zVd+yVyyC/g75T1Q10GofyqHYNYWgPiIxgQIoYPyyeKw==
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-6.0.3-4.tgz#8dafc84178080f9c4f21076953ea1d0dc0bfe0fc"
+  integrity sha512-pNEEndJYNMCYEZG79MkoMc40AYKBfm0md8pawJ/SUu/1aIhToJcKu+9hHT/7WMLudsakOgC/C8KKFuZOs4QTgw==
 
 "@rails/webpacker@5.2.1":
   version "5.2.1"
@@ -1120,6 +1120,11 @@ acorn@^6.4.1:
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
   integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
+
+actioncable@^5.2.4-4:
+  version "5.2.4-4"
+  resolved "https://registry.yarnpkg.com/actioncable/-/actioncable-5.2.4-4.tgz#0f74282a18e30443a510de867f704837ceab3332"
+  integrity sha512-qlsr7nTyGwP5mdGSRL3uJsXgbsZ/T/j3cE7QlmcjRKXDuHcm0X0P95/+Ah/cqtx5F3Q2gFYosppGD0uorF8voQ==
 
 aggregate-error@^3.0.0:
   version "3.1.0"
@@ -7167,6 +7172,11 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+turbolinks@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/turbolinks/-/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
+  integrity sha512-pMiez3tyBo6uRHFNNZoYMmrES/IaGgMhQQM+VFF36keryjb5ms0XkVpmKHkfW/4Vy96qiGW3K9bz0tF5sK9bBw==
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
