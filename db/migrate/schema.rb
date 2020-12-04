@@ -10,32 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_04_120542) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "students", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.integer "phone_number"
-  end
-
-  create_table "todo_items", force: :cascade do |t|
-    t.bigint "todo_list_id"
-    t.text "description"
-    t.boolean "completed"
-    t.datetime "completed_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["todo_list_id"], name: "index_todo_items_on_todo_list_id"
-  end
-
-  create_table "todo_lists", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "todo_items", "todo_lists"
 end
