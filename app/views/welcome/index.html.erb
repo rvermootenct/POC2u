@@ -1,71 +1,51 @@
-<h1> Simple example page </h1>
 
-<h3> Click to show example </h3>
-<p>
-  <div data-reflex="click->WelcomeReflex#greetings"> click here </div>
-  <%= @welcome_message %>
-</p>
+<div class="container">
+  <h1> Basic demo of Stimulus Reflex actions using Ruby 5 </h1>
 
-<h3> Increment example using element dataset </h3>
-<p>
-  <div data-reflex='click->WelcomeReflex#increment'
-       data-step="1"
-       data-count="<%=@count.to_i %>" >
-    Increment <%= @count.to_i %>
+  <div>
+      <h3> Example: Click to reveal</h3>
+        <p>
+          <div data-reflex="click->WelcomeReflex#greetings">Click this sentence to test.</div>
+          <br/>
+          <%= @welcome_message %>
+        </p>
+        <hr/>
+      <h3> Example: Click to increment using element dataset </h3>
+        <p>
+          <div data-reflex='click->WelcomeReflex#increment'
+              data-step="1"
+              data-count="<%=@count.to_i %>" >
+            Increment: <%= @count.to_i %>
+          </div>
+        </p>
+        <hr/>
+      <h3> Example: User input display on screen </h3>
+        <p>
+          <h4> Enter your name: </h4>
+          <input type="text" value="<%=@value%>" data-reflex="keyup->WelcomeReflex#say_hello">
+          <h4> <%= @name %> </h4>
+        </p>
+        <hr/>
+      <%# <h3> Example: Multiple reflex actions </h3>
+        <p>
+          <div data-reflex="click->WelcomeReflex#multi1 ">
+        </p> %>
+    </div>
+
+    <div>
+      <h2> Persisted data </h2>
+
+      <h3> Session Persisted </h3>
+      <hr/>
+      <h3> Example: Increment using element dataset and Stimulus controller </h3>
+      <p>
+        <div data-controller="example"
+            data-action='click->example#increment'
+            data-step="1"
+            data-count="<%=@increment.to_i %>" >
+          Increment from Stimulus: <%= @increment.to_i %>
+        </div>
+      </p>
+
   </div>
-</p>
-
-<h3> input example showing to screen </h3>
-<p>
-  <h4> Enter your name </h4>
-  <input type="text" value="<%=@value%>" data-reflex="keyup->WelcomeReflex#say_hello">
-  <h4> <%= @name %> </h4>
-</p>
-
-<%# <h3> Multiple reflex actions </h3>
-<p>
-<div data-reflex="click->WelcomeReflex#multi1 ">
-</p> %>
-
-<h3> Persisted data </h3>
-
-<h3> Session Persisted </h3>
-<h3> Increment example using element dataset and stimulus controller </h3>
-<p>
-  <div data-controller="example"
-       data-action='click->example#increment'
-       data-step="1"
-       data-count="<%=@increment.to_i %>" >
-    Increment from stimulus <%= @increment.to_i %>
-  </div>
-</p>
-
-<h3> Static Table (no stimulus) </h3>
-<table>
-  <tr>
-    <th>Student Name</th>
-    <th>email</th>
-    <th>Phone number</th>
-  </tr>
-
-  <% @students&.each do |student| %>
-    <tr>
-      <td><%= student[:name] %></td>
-      <td><%= student[:email] %></td>
-      <td><%= student[:phone_number] %></td>
-    </tr>
-  <% end %>
-</table>
-
-  <%= form_with model: @student, url: save_student_path do |f| %>
-    <%= f.label "name:" %>
-    <%= f.text_field :name %>
-    <%= f.label "email:" %>
-    <%= f.text_field :email %>
-    <%= f.label "phone number:" %>
-    <%= f.text_field :phone_number %>
-    <%= f.submit %>
-  <% end%>
-
-
-<%= %>
+</div>

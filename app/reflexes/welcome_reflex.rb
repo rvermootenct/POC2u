@@ -1,6 +1,6 @@
 class WelcomeReflex < StimulusReflex::Reflex
     def greetings
-        @welcome_message = 'Welcome to stimulas reflex working'
+        @welcome_message = 'Stimulus Reflex click action working!'
     end
 
     def increment
