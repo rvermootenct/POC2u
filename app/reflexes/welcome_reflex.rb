@@ -4,6 +4,8 @@ class WelcomeReflex < StimulusReflex::Reflex
     end
 
     def increment
+        # increment example
+        # https://docs.stimulusreflex.com/quickstart#trigger-reflex-actions-with-data-reflex-attributes
          @count = element.dataset[:count].to_i + element.dataset[:step].to_i
     end
 
