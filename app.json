@@ -2,5 +2,9 @@
   "name": "Stimulus reflex example",
   "description": "A barebones example app using stimulus reflex on rails 5.2",
   "repository": "https://github.com/hopsoft/stimulus_reflex",
-  "keywords": ["stimulus reflex", "rails 5.2", "action cable"]
+  "keywords": ["stimulus reflex", "rails 5.2", "action cable"],
+  "addons": [
+    "heroku-redis",
+    { "plan": "hobby-dev"}
+  ]
 }
