@@ -7,7 +7,7 @@
     "actioncable": "^5.2.4-4",
     "rails-ujs": "^5.2.4-4",
     "stimulus": "^1.1.1",
-    "stimulus_reflex": "3.4.0-pre4",
+    "stimulus_reflex": "^3.4.0-pre4",
     "turbolinks": "^5.2.0"
   },
   "engines": {
