@@ -11,7 +11,7 @@
     "turbolinks": "^5.2.0"
   },
   "engines": {
-    "node": "12.0"
+    "node": "12.x"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
