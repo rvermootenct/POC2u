@@ -1,16 +1,16 @@
 
 <div class="container">
-  <h1> Basic demo of Stimulus Reflex actions using Ruby 5 </h1>
+  <h1> Basic demo of Stimulus Reflex actions using Rails 5.3 </h1>
 
   <div>
-      <h3> Example: Click to reveal</h3>
+      <h3>  Click to reveal</h3>
         <p>
           <div data-reflex="click->WelcomeReflex#greetings">Click this sentence to test.</div>
           <br/>
           <%= @welcome_message %>
         </p>
         <hr/>
-      <h3> Example: Click to increment using element dataset </h3>
+      <h3> Click to increment using element dataset </h3>
         <p>
           <div data-reflex='click->WelcomeReflex#increment'
               data-step="1"
@@ -19,7 +19,7 @@
           </div>
         </p>
         <hr/>
-      <h3> Example: User input display on screen </h3>
+      <h3> User input display on screen </h3>
         <p>
           <h4> Enter your name: </h4>
           <input type="text" value="<%=@value%>" data-reflex="keyup->WelcomeReflex#say_hello">
@@ -33,7 +33,7 @@
 
       <h3> Session Persisted </h3>
       <hr/>
-      <h3> Example: Increment using element dataset and Stimulus controller </h3>
+      <h3>Increment using element dataset and Stimulus controller </h3>
       <p>
         <div data-controller="example"
             data-action='click->example#increment'
