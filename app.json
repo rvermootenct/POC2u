@@ -4,7 +4,6 @@
   "repository": "https://github.com/hopsoft/stimulus_reflex",
   "keywords": ["stimulus reflex", "rails 5.2", "action cable"],
   "addons": [
-    "heroku-redis",
-    { "plan": "hobby-dev"}
+    "heroku-redis"
   ]
 }
