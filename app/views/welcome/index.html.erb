@@ -47,7 +47,7 @@
     <h2>Add New Students</h2>
     <p> Student count <%= @students.count %> </p>
     <h4>Enter Student Details</h4>
-    <!-- <table class ='student-table'>
+    <table class ='student-table'>
       <tr>
         <th>First name </th>
         <th> Last name </th>
@@ -62,7 +62,7 @@
             <td><%= student[:number] %></td>
           </tr>
       <% end %>
-    </table> -->
+    </table>
     <div class = 'student-form'>
       <%= form_with model: @student, url: save_student_path do |f| %>
 
