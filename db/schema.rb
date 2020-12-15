@@ -21,4 +21,5 @@ ActiveRecord::Schema.define(version: 2020_12_15_071801) do
     t.string "last_name"
     t.string "email"
   end
+
 end

@@ -44,11 +44,12 @@
       </p>
   </div>
   <div>
-    <h2> Tables </h2>
-    <p> student count <%= @students.count %> </p>
-    <table class ='student-table'>
+    <h2>Add New Students</h2>
+    <p> Student count <%= @students.count %> </p>
+    <h4>Enter Student Details</h4>
+    <!-- <table class ='student-table'>
       <tr>
-        <th> first name </th>
+        <th>First name </th>
         <th> Last name </th>
         <th> Email </th>
         <th> Number </th>
@@ -61,17 +62,17 @@
             <td><%= student[:number] %></td>
           </tr>
       <% end %>
-    </table>
+    </table> -->
     <div class = 'student-form'>
       <%= form_with model: @student, url: save_student_path do |f| %>
-        <%= f.label "first name:" %>
-        <%= f.text_field :first_name %>
-        <%= f.label "surname:" %>
-        <%= f.text_field :last_name %>
-        <%= f.label "email:" %>
-        <%= f.text_field :email %>
-        <%= f.label "phone number:" %>
-        <%= f.text_field :number %>
+
+        <%= f.text_field :first_name, placeholder: "First Name*" %>
+
+        <%= f.text_field :last_name, placeholder: "Surname*"  %>
+
+        <%= f.text_field :email, placeholder: "Email*" %>
+
+        <%= f.text_field :number, placeholder: "Phone Number*" %>
         <%= f.submit %>
       <% end%>
     </div>

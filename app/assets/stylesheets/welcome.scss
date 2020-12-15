@@ -2,10 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 * {
-  font-family: Roboto;
+  font-family: Noto Sans;
 }
 
 .container {
@@ -40,15 +40,47 @@ h3:first-of-type {
   margin-top: 16px;
 }
 
+h4 {
+  line-height: 28px;
+  font-size: 22px;
+  margin-bottom: 43px;
+}
+
 .table {
   display: block;
   //   flex-direction: column;
 }
 
-.student-table{
+.student-table {
   background-color: #ffffff;
 }
 
-.student-form{
+.student-form {
   background-color: #ffffff;
+  margin-bottom: 200px;
+}
+
+.student-form > form {
+  display: flex;
+  flex-direction: row;
+}
+
+form > input {
+  color: #333d47;
+  font-size: 16px;
+  line-height: 26px;
+  margin-right: 25px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #868e98;
+}
+
+form > input[type="submit"] {
+  background: #041324;
+  border-radius: 80px;
+  color: #fff;
+  width: 167px;
+  height: 46px;
+  cursor: pointer;
 }
