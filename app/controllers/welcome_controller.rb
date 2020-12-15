@@ -11,13 +11,13 @@ class WelcomeController < ApplicationController
             email: student_params['email'],
             first_name: student_params['first_name'],
             last_name: student_params['last_name'],
-            number: student_params['number']
+            phone_number: student_params['number']
         )
     end
 
     private
 
     def student_params
-        params.require(:student).permit(:first_name, :last_name, :email, :number)
+        params.require(:student).permit(:first_name, :last_name, :email, :phone_number)
     end
 end

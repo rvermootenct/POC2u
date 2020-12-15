@@ -52,14 +52,14 @@
         <th>First name </th>
         <th> Last name </th>
         <th> Email </th>
-        <th> Number </th>
+        <th> Phone Number </th>
       </tr>
       <% @students.each do |student| %>
           <tr>
             <td><%= student[:first_name] %></td>
             <td><%= student[:last_name] %></td>
             <td><%= student[:email] %></td>
-            <td><%= student[:number] %></td>
+            <td><%= student[:phone_number] %></td>
           </tr>
       <% end %>
     </table>
@@ -72,7 +72,7 @@
 
         <%= f.text_field :email, placeholder: "Email*" %>
 
-        <%= f.text_field :number, placeholder: "Phone Number*" %>
+        <%= f.text_field :phone_number, placeholder: "Phone Number*" %>
         <%= f.submit %>
       <% end%>
     </div>
