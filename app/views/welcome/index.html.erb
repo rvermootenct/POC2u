@@ -63,17 +63,19 @@
           </tr>
       <% end %>
     </table>
-    <div class = 'student-form'>
-      <%= form_with model: @student, url: save_student_path do |f| %>
+    <div class='student-form'>
+      <!-- <input type="text" class="input-text"/> -->
+      <%= form_with model: @student, url: save_student_path, data: { controller: "validations", action: "submit->validations#reset" }  do |f| %>
 
-        <%= f.text_field :first_name, placeholder: "First Name*" %>
+        <%= f.text_field :first_name, placeholder: "First Name*", class: "input-text validation_status @student, :first_name", data: { reflex: "debounced:input", reflex_permanent: true } %>
 
-        <%= f.text_field :last_name, placeholder: "Surname*"  %>
+        <%= f.text_field :last_name, placeholder: "Surname*", class: "input-text"   %>
 
-        <%= f.text_field :email, placeholder: "Email*" %>
+        <%= f.text_field :email, placeholder: "Email*", class: "input-text"  %>
 
-        <%= f.text_field :phone_number, placeholder: "Phone Number*" %>
-        <%= f.submit %>
+        <%= f.text_field :phone_number, placeholder: "Phone Number*", class: "input-text"  %>
+        <%= f.submit class: "input-submit" %>
       <% end%>
     </div>
 </div>
+

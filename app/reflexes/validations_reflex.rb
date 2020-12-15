@@ -1,0 +1,2 @@
+class ValidationsReflex < ApplicationReflex
+end
