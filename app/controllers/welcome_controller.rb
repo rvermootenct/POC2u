@@ -4,8 +4,6 @@ class WelcomeController < ApplicationController
         @students = Student.all
         @student = Student.new
         @student.validate
-        @first_name_validation_message = @student.validate, :first_name
-        # @last_name_validation_message = validation_status @student, :last_name
     end
 
     def save
