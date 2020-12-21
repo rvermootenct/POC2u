@@ -1,0 +1,19 @@
+<h1>Student Search</h1>
+
+<%= form_for search_path, method: :get do |f| %>
+<p>
+  <%= f.label "Search for" %> <%= text_field_tag :q, params[:q] %> <%=
+  submit_tag "search", name: nil %>
+</p>
+<% end %>
+
+<ul>
+  <% @students.each do |student| %>
+  <li>
+    <h3>
+      <%= link_to student.first_name, controller: "students", action: "show",
+      id: first_name._id%>
+    </h3>
+  </li>
+  <% end %>
+</ul>

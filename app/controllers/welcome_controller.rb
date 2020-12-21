@@ -3,6 +3,13 @@ class WelcomeController < ApplicationController
         @increment = session[:count]
         @students = Student.all
         @student = Student.new
+        puts '------------'
+        puts Student
+        puts '------------'
+    end
+
+    def show
+        @students = Student.find_by(params[:first_name])
     end
 
     def save
@@ -14,7 +21,6 @@ class WelcomeController < ApplicationController
             number: student_params['number']
         )
     end
-
     private
 
     def student_params

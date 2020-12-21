@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 root 'welcome#index'
 
 post '/save_student', to: 'welcome#save'
+resources :students
+get 'search', to: 'search#search'
 end
 
