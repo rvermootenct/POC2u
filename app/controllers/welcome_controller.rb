@@ -19,6 +19,7 @@ class WelcomeController < ApplicationController
     private
 
     def student_params
+        return {} unless params.key?(:student)
         params.require(:student).permit(:first_name, :last_name, :email, :phone_number)
     end
 end

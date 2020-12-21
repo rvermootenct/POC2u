@@ -49,33 +49,41 @@
 
 
     <h2>TESTING FORMS</h2>
+      <p>
+        <div data-controller="example"
+          data-action='click->example#increment'
+          data-step="1"
+          data-count="<%=@increment.to_i %>" >
+        Increment from Stimulus: <%= @increment.to_i %>
+        </div>
+      </p>
     <%= form_with model: @student, url: "#", data: { controller: "validations", action: "submit->validations#reset" } do |f| %>
-  <div class="input-text <%= validation_status @student, :first_name %>">
-    <%= f.label :first_name, "First Name" %>
-    <%= f.text_field :first_name, class: "input-text #{validation_status @student, :first_name}",
-      data: { reflex: "debounced:input", reflex_permanent: true } %>
-    <%= validation_message @student, :first_name %>
-  </div>
+      <div class="input-text <%= validation_status @student, :first_name %>">
+        <%= f.label :first_name, "First Name" %>
+        <%= f.text_field :first_name, class: "input-text #{validation_status @student, :first_name}",
+          data: { reflex: "debounced:input", reflex_permanent: true } %>
+        <%= validation_message @student, :first_name %>
+      </div>
 
-  <div class="input-text <%= validation_status @student, :last_name %>">
-    <%= f.label :last_name, "Last Name" %>
-    <%= f.text_field :last_name, class: "input-text",
-      data: { reflex: "debounced:input", reflex_permanent: true } %>
-    <%= validation_message @student, :last_name %>
-  </div>
+      <div class="input-text <%= validation_status @student, :last_name %>">
+        <%= f.label :last_name, "Last Name" %>
+        <%= f.text_field :last_name, class: "input-text",
+          data: { reflex: "debounced:input", reflex_permanent: true } %>
+        <%= validation_message @student, :last_name %>
+      </div>
 
-  <div class="input-text <%= validation_status @student, :email %>">
-    <%= f.label :email %>
-    <%= f.email_field :email, class: "input-text",
-      data: { reflex: "debounced:input", reflex_permanent: true } %>
-    <%= validation_message @student, :email %>
-  </div>
+      <div class="input-text <%= validation_status @student, :email %>">
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "input-text",
+          data: { reflex: "debounced:input", reflex_permanent: true } %>
+        <%= validation_message @student, :email %>
+      </div>
 
-  <div class="input-text">
-    <%= f.submit @student.valid? ? "Submit" : "Awaiting valid input...",
-      data: { target: "validations.submit", disable_with: "Great Job! Form will reset shortly..." } %>
-    <a href="#" class="input-submit" data-action="click->validations#reset">Reset</a>
-  </div>
-<% end %>
+      <div class="input-text">
+        <%= f.submit @student.valid? ? "Submit" : "Awaiting valid input...",
+          data: { target: "validations.submit", disable_with: "Great Job! Form will reset shortly..." } %>
+        <a href="#" class="input-submit" data-action="click->validations#reset">Reset</a>
+      </div>
+    <% end %>
 </div>
 
