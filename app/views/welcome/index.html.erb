@@ -49,14 +49,6 @@
 
 
     <h2>TESTING FORMS</h2>
-      <p>
-        <div data-controller="example"
-          data-action='click->example#increment'
-          data-step="1"
-          data-count="<%=@increment.to_i %>" >
-        Increment from Stimulus: <%= @increment.to_i %>
-        </div>
-      </p>
     <%= form_with model: @student, url: "#", data: { controller: "validations", action: "submit->validations#reset" } do |f| %>
       <div class="input-text <%= validation_status @student, :first_name %>">
         <%= f.label :first_name, "First Name" %>

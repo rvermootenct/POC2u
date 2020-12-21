@@ -8,7 +8,7 @@
     "debounced": "^0.0.5",
     "rails-ujs": "^5.2.4-4",
     "stimulus": "^1.1.1",
-    "stimulus_reflex": "^3.4.0-pre9",
+    "stimulus_reflex": "3.4.0-pre9",
     "turbolinks": "^5.2.0"
   },
   "engines": {
