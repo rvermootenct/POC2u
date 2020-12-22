@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
     def index
         @increment = session[:count]
         @students = Student.all
-        @student = Student.new
+        @student ||= Student.new(student_params)
         @student.validate
     end
 

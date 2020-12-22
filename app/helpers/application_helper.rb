@@ -1,9 +1,5 @@
 module ApplicationHelper
     def validation_status(student, attr)
-        puts "--------------"
-        puts student
-        puts attr
-        puts "-----------------"
         return :ignore unless student.attributes[attr.to_s].present?
         student.errors[attr].present? ? :invalid : :valid
       end
